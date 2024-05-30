@@ -38,7 +38,7 @@ export class TaskController {
   @Put(':id')
   @Auth()
   async update(
-    @Body() dto: TaskDto,
+    @Body() dto: Partial<TaskDto>,
     @CurrentUser('id') userId: string,
     @Param('id') id: string,
   ) {
